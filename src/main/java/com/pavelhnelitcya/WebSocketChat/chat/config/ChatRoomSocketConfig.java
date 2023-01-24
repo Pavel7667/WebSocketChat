@@ -25,6 +25,7 @@ public class ChatRoomSocketConfig {
         Map<String, WebSocketHandler> map = Map.of(
                 "/chat", chatRoomService
         );
+        // add "-1" to give hyperPriority for this method compared to other controllers
         return new SimpleUrlHandlerMapping(map, -1);
     }
 
